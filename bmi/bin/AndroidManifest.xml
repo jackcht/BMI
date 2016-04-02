@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.bmi"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <!-- 若是一个应用程序中包含多个画面时，会定义多个不同的Activity，我们也必须在"application"标签中，使用多个"activity"标签，为不同的Activity添加描述。 -->
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <!-- "intent- filter"标签定义了这个"activity"的性质。"intent-filter"中主要包含了两个标签："action" 跟"category"标签。
+                "action"标签中的"android:name"属性，其内容"android.intent.action.MAIN"表示：这个Activity 是此应用程序的进入点（就像程序中常见
+					的main 主程序），开启这个应用程序时，应先执行这个Activity。 
+				"category"标签中的"android:name"属性，其内容"android.intent.category.LAUNCHER"表示：这个Activity 将显
+					示在Launcher 的应用程序列表中。-->
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity 
+            android:name="Report"
+            android:label="@string/report_title">
+            
+        </activity>
+        
+        
+    </application>
+
+</manifest>
